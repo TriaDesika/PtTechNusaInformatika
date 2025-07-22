@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – PT TechNusa Informatika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="Logo.png" alt="Logo PT TechNusa Informatika" class="site-header__logo">
+    </a>
+    <h1 class="site-header__title">PT TechNusa Informatika</h1>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="clients.html">Client</a>
+    <a href="visi-misi.html">Visi dan Misi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="produk.html">Produk Kami</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="about.html" class="active">About Us</a>
+  </nav>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+  <div class="dropdown">
+    <button class="dropdown-toggle">Artikel ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="artikel.html#konsep-ti">Konsep Teknologi Informasi</a></li>
+      <li><a href="artikel.html#keamanan-data">Tips Keamanan Data</a></li>
+      <li><a href="artikel.html">Lihat Semua...</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Event ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="event.html#webinar">Webinar IT Bulanan</a></li>
+      <li><a href="event.html#training">In-House Training</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Login ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.nextElementSibling;
+      menu.classList.toggle('show');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      if (!menu.previousElementSibling.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="site-main">
+      <h2>Tentang Kami</h2>
+      <p><strong>PT TechNusa Informatika</strong> didirikan pada tahun 2010 oleh sekelompok profesional IT dengan visi menghadirkan solusi teknologi yang mudah diakses dan relevan bagi bisnis di Indonesia.</p>
+      <p>Berawal dari tim kecil yang fokus pada pengembangan aplikasi desktop untuk UKM, TechNusa berkembang menjadi perusahaan penyedia layanan IT terintegrasi mencakup pengembangan aplikasi web &amp; mobile, infrastruktur cloud, integrasi sistem, keamanan jaringan, dan konsultasi transformasi digital.</p>
+      <p>Sejak tahun 2015 kami berekspansi ke sektor pendidikan dan pemerintahan, menyediakan platform e-learning dan sistem informasi akademik yang kini digunakan oleh lebih dari 50 institusi. Pada 2020, kami meluncurkan layanan <em>managed cloud services</em> untuk membantu perusahaan mengelola infrastruktur tanpa harus membangun data center sendiri.</p>
+      <p>Dengan pengalaman lintas industri—keuangan, ritel, manufaktur, pendidikan, dan sektor publik—kami siap menjadi mitra strategis transformasi digital Anda.</p>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    Design by : TRIA DESIKA &bull; © 2025 All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>

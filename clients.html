@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klien Kami – PT TechNusa Informatika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <header class="site-header">
+    <a href="index.html"><img src="Logo.png" alt="Logo" class="site-header__logo"></a>
+    <h1 class="site-header__title">PT TechNusa Informatika</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="clients.html">Client</a>
+    <a href="visi-misi.html">Visi dan Misi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="produk.html">Produk Kami</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+  <div class="dropdown">
+    <button class="dropdown-toggle">Artikel ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="artikel.html#konsep-ti">Konsep Teknologi Informasi</a></li>
+      <li><a href="artikel.html#keamanan-data">Tips Keamanan Data</a></li>
+      <li><a href="artikel.html">Lihat Semua...</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Event ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="event.html#webinar">Webinar IT Bulanan</a></li>
+      <li><a href="event.html#training">In-House Training</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Login ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.nextElementSibling;
+      menu.classList.toggle('show');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      if (!menu.previousElementSibling.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+    <main class="site-main">
+      <h2>Klien Kami</h2>
+      <p>Berikut sebagian klien yang telah bekerja sama dengan PT TechNusa Informatika:</p>
+      <div class="clients-logos">
+  <figure>
+    <img src="img (1).jpg" alt="PT Sejahtera Abadi">
+    <figcaption>PT Sejahtera Abadi</figcaption>
+  </figure>
+  <figure>
+    <img src="img (2).jpg" alt="Bank Nusantara">
+    <figcaption>Bank Nusantara</figcaption>
+  </figure>
+  <figure>
+    <img src="img (3).jpg" alt="Universitas Teknologi">
+    <figcaption>Universitas Teknologi</figcaption>
+  </figure>
+  <figure>
+    <img src="img (4).jpg" alt="CV Maju Jaya">
+    <figcaption>CV Maju Jaya</figcaption>
+  </figure>
+</div>
+
+      <h3>Daftar Klien (Teks)</h3>
+      <ul>
+        <li>PT Sejahtera Abadi</li>
+        <li>Bank Nusantara</li>
+        <li>Universitas Teknologi</li>
+        <li>CV Maju Jaya</li>
+        <li>RS Prima Sehat</li>
+        <li>Disdik Provinsi X</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    Design by : TRIA DESIKA &bull; © 2025 All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>

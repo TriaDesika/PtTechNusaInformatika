@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk & Layanan – PT TechNusa Informatika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <header class="site-header">
+    <a href="index.html"><img src="Logo.png" alt="Logo" class="site-header__logo"></a>
+    <h1 class="site-header__title">PT TechNusa Informatika</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="clients.html">Client</a>
+    <a href="visi-misi.html">Visi dan Misi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="produk.html" class="active">Produk Kami</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+  <div class="dropdown">
+    <button class="dropdown-toggle">Artikel ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="artikel.html#konsep-ti">Konsep Teknologi Informasi</a></li>
+      <li><a href="artikel.html#keamanan-data">Tips Keamanan Data</a></li>
+      <li><a href="artikel.html">Lihat Semua...</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Event ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="event.html#webinar">Webinar IT Bulanan</a></li>
+      <li><a href="event.html#training">In-House Training</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Login ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.nextElementSibling;
+      menu.classList.toggle('show');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      if (!menu.previousElementSibling.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+</script>
+    <main class="site-main">
+      <h2>Produk & Jasa Kami</h2>
+      <p>Kami menawarkan rangkaian solusi TI untuk mendukung kebutuhan digitalisasi bisnis Anda. Berikut kategori utama:</p>
+
+      <div class="produk-grid">
+        <div class="produk-card">
+          <h4>Aplikasi Web & Mobile</h4>
+          <p>Pengembangan sistem kustom (ERP mini, e-commerce, e-learning, booking system) berbasis web maupun mobile.</p>
+        </div>
+        <div class="produk-card">
+          <h4>Sistem ERP / CRM</h4>
+          <p>Integrasi data operasional perusahaan: penjualan, stok, produksi, pelanggan, laporan finansial.</p>
+        </div>
+        <div class="produk-card">
+          <h4>Cloud & Infrastruktur</h4>
+          <p>Deploy aplikasi di cloud (AWS/Azure), kontainerisasi, backup & disaster recovery.</p>
+        </div>
+        <div class="produk-card">
+          <h4>Konsultasi IT & Integrasi</h4>
+          <p>Audit sistem, migrasi server, integrasi API antar platform, keamanan jaringan.</p>
+        </div>
+      </div>
+
+      <h3>Paket Layanan Populer</h3>
+      <ul>
+        <li>Paket Starter: Website profil + hosting 1 tahun.</li>
+        <li>Paket Bisnis: Web + Mobile App + Training admin.</li>
+        <li>Paket Enterprise: Integrasi ERP + Cloud + SLA 24/7.</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    Design by : TRIA DESIKA &bull; © 2025 All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="form-style.css" />
+</head>
+<body class="form-page">
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <label for="name">Nama</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Daftar</button>
+    </form>
+
+    <div id="message" style="margin-top: 15px; font-weight: bold;"></div>
+
+    <p id="loginLink" style="display: none; margin-top: 10px;">
+      Silakan <a href="signin.html"><button style="margin-top: 10px;">Sign In</button></a>
+    </p>
+
+    <p id="defaultLink">Sudah punya akun? <a href="signin.html">Sign In</a></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("message");
+    const loginLink = document.getElementById("loginLink");
+    const defaultLink = document.getElementById("defaultLink");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const user = { name, email, password };
+      localStorage.setItem("userData", JSON.stringify(user));
+
+      message.style.color = "green";
+      message.textContent = "Akun berhasil dibuat!";
+
+      form.style.display = "none";
+      defaultLink.style.display = "none";
+      loginLink.style.display = "block";
+    });
+  </script>
+</body>
+</html>

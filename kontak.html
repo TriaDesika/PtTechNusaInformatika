@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami – PT TechNusa Informatika</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <header class="site-header">
+    <a href="index.html"><img src="Logo.png" alt="Logo" class="site-header__logo"></a>
+    <h1 class="site-header__title">PT TechNusa Informatika</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="clients.html">Client</a>
+    <a href="visi-misi.html">Visi dan Misi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="produk.html">Produk Kami</a>
+    <a href="kontak.html" class="active">Kontak</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+  <div class="dropdown">
+    <button class="dropdown-toggle">Artikel ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="artikel.html#konsep-ti">Konsep Teknologi Informasi</a></li>
+      <li><a href="artikel.html#keamanan-data">Tips Keamanan Data</a></li>
+      <li><a href="artikel.html">Lihat Semua...</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Event ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="event.html#webinar">Webinar IT Bulanan</a></li>
+      <li><a href="event.html#training">In-House Training</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-toggle">Login ▾</button>
+    <ul class="dropdown-menu">
+      <li><a href="signin.html">Sign in</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.nextElementSibling;
+      menu.classList.toggle('show');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      if (!menu.previousElementSibling.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+    <main class="site-main">
+      <h2>Kontak Kami</h2>
+
+      <p><strong>Alamat Kantor:</strong><br>
+        Jl. Merdeka No.123, Jakarta 10110, Indonesia</p>
+
+      <p><strong>Telepon (WhatsApp):</strong><br>
+        <a href="https://wa.me/6281234567890" target="_blank">
+          +62 812-3456-7890 
+        </a></p>
+
+      <p><strong>Email:</strong><br>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=triadesika5@gmail.com" target="_blank">
+          triadesika5@gmail.com 
+        </a></p>
+
+      <div class="map-container" style="margin-top: 3rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <img src="icon_lokasi.png" alt="Location Icon"
+            style="width: 40px; height: 40px; margin-right: 10px;" />
+          <h2 style="color: white; margin: 0;">Lokasi Kami (POLNEP)</h2>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8976410674974!2d109.3444756!3d-0.053921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599622b58947%3A0x209695fee6b07761!2sPoliteknik%20Negeri%20Pontianak!5e0!3m2!1sid!2sid!4v1720516590000!5m2!1sid!2sid" 
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    Design by : TRIA DESIKA &bull; © 2025 All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>
